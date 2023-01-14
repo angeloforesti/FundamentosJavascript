@@ -1,51 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
+    <style>
+        body {
+            background-image: url(https://jcconcursos.com.br/media/_versions/noticia/mega-sena-premio-jogar-online_widelg.jpg);
+        }
+
+        .titulo {
+            height: 5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.5);
+            color: blanchedalmond;
+
+        }
 
 
+        .sub {
+            height: 25vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: blanchedalmond;
 
-body{
-background-image: url(https://jcconcursos.com.br/media/_versions/noticia/mega-sena-premio-jogar-online_widelg.jpg);
-}
 
-.titulo {
-height: 5vh;
-display: flex;
-align-items: center;
-justify-content: center;
-background: rgba(0,0,0,0.5);
-color: blanchedalmond;
-     
-}
+        }
 
-    
-.sub{
-    height: 25vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: blanchedalmond;
-     
-    
-}
+        .container {
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 500;
+            background: rgba(0, 0, 0, 0.5);
+            color: blanchedalmond;
 
-.container{
-    height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    background: rgba(0,0,0,0.5);
-    color: blanchedalmond;
-     
-}
+        }
 
-.botao{
+        .botao {
             color: rgb(30, 42, 212);
             column-rule-color: rgb(0, 0, 0);
             border: 100px;
@@ -54,53 +52,52 @@ color: blanchedalmond;
             margin-top: 4px;
             margin-left: 40px;
         }
-
-
-
-
-</style>
+    </style>
 
 </head>
+
 <body>
     <h1 class="titulo">Gerador de jogos para megasena</h1><br>
     <h2 class="sub">Resultado:</h1>
-    
-    <div class="container">
-        
-        <h3 id="result"></h2>
+
+        <div class="container">
+
+            <h3 id="result">
+    </h2>
 
 
     <button class="botao" onclick="random()">sorteio</button>
 
-    
-    
+
+
     <script>
-//usando JS para fazer o seu cartao na megasena
-function rand({min = 1, max = 60}){
-
-                 
-const valor = Math.random() * (max - min) + min;
-return Math.floor(valor);
-};
-
-function random(){
-const numbers = [];
-
-do {
-const randomNumber = rand({ min: 1, max: 60 });
-if (!numbers.includes(randomNumber)) numbers.push(randomNumber);
-} while (numbers.length < 6);
-console.log(numbers.sort());
-
-result.innerHTML = numbers;
-
-}
+        //usando JS para fazer o seu cartao na megasena
+        function rand({ min = 1, max = 60 }) {
 
 
-                 
+            const valor = Math.random() * (max - min) + min;
+            return Math.floor(valor);
+        };
+
+        function random() {
+            const numbers = [];
+
+            do {
+                const randomNumber = rand({ min: 1, max: 60 });
+                if (!numbers.includes(randomNumber)) numbers.push(randomNumber);
+            } while (numbers.length < 6);
+            console.log(numbers.sort());
+
+            result.innerHTML = numbers;
+
+        }
 
 
 
-</script>
+
+
+
+    </script>
 </body>
+
 </html>

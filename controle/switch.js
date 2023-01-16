@@ -17,6 +17,7 @@ const imprimirResultado = function (nota) {
         default:
             console.log('nota invalida')         
     }
+    console.log("fim")
  
 }
 

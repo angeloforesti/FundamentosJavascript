@@ -9,4 +9,8 @@ comparaComThis = comparaComThis.bind(obj)
 comparaComThis(global)
 comparaComThis(obj)
 
-let comparaComThisArrow = param
+let comparaComThisArrow = param => console.log(this === param)
+comparaComThisArrow(global)
+
+//this dentro de uma função tradicional no JS varia conforme a chamada, no arrow é bem mais logico
+

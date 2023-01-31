@@ -14,3 +14,5 @@ comparaComThisArrow(global)
 
 //this dentro de uma função tradicional no JS varia conforme a chamada, no arrow é bem mais logico
 
+comparaComThisArrow = comparaComThisArrow.bind(obj)
+comparaComThisArrow(obj)

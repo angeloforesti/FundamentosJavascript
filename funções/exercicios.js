@@ -9,11 +9,11 @@ const calc = (n1, n2) => {
     console.log(div)
     let dim = n1 - n2;
     console.log(dim)
-    
+
 }
 
-calc(2,3)
-	
+calc(2, 3)
+
 
 
 /*02) Os triângulos podem ser classificados em 3 tipos quanto ao tamanho de seus lados:
@@ -23,11 +23,11 @@ ao tamanho de seus lados. (Neste exemplo deve-se abstrair as condições matemá
 triângulo).*/
 
 const teste = function triangulo(x, y, z) {
-    if(x === y && x === z && y === z){
+    if (x === y && x === z && y === z) {
         console.log('equilatero')
-    }else if(x != y && x != z & y != z){
+    } else if (x != y && x != z & y != z) {
         console.log('escaleno')
-    }else{
+    } else {
         console.log('isoceles')
     }
 
@@ -39,15 +39,22 @@ teste(2, 2, 2)
 
 /*03) Crie uma função que recebe dois parâmetros, 
 base e expoente, e retorne a base elevada ao expoente*/
-const exp = (a, b) =>{
-    return a**b
+const exp = (a, b) => {
+    return a ** b
 }
 
-console.log(exp(2,1))
-console.log(exp(2,2))
-console.log(exp(2,3))
-console.log(exp(2,4))
+console.log(exp(2, 1))
+console.log(exp(2, 2))
+console.log(exp(2, 3))
+console.log(exp(2, 4))
 
 /*04) Crie uma função que irá receber dois valores, o dividendo e o divisor. A função deverá imprimir o resultado
 e o resto da divisão destes dois valores.*/
 
+const divisao = (a, b) => {
+    let div = a / b;
+    console.log(div);
+    let resto = a % b;
+    console.log(resto)
+}
+divisao(4, 2)

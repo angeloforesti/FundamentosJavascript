@@ -72,3 +72,24 @@ const dinheiro = valor => {
 }
 
 dinheiro(0.60000000001)
+
+/*06) Elabore duas funções que recebem três parâmetros: 
+capital inicial, taxa de juros e tempo de aplicação.
+A primeira função retornará o montante da aplicação financeira sob o 
+regime de juros simples e a segunda retornará o valor da aplicação 
+sob o regime de juros compostos.*/
+
+const aplicacao = (capital, taxa, tempo) =>{
+    let simples = capital * taxa/100 * tempo
+    console.log(simples)
+} 
+
+const aplicacao2 = (capital, taxa, tempo) =>{
+    let composto = capital*(1 + taxa/100)**tempo 
+    console.log(composto.toFixed(2))
+   
+} 
+
+aplicacao(1000,10,12)
+aplicacao2(1000,10,12)
+

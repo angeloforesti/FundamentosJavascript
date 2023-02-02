@@ -67,7 +67,7 @@ que ela receba um valor como 0.30000000000000004 e retorne R$0,30 (observe a ví
 
 const dinheiro = valor => {
     let resultado = valor.toFixed(2)
-    console.log(resultado,'R$')
+    console.log(resultado, 'R$')
 
 }
 
@@ -79,17 +79,37 @@ A primeira função retornará o montante da aplicação financeira sob o
 regime de juros simples e a segunda retornará o valor da aplicação 
 sob o regime de juros compostos.*/
 
-const aplicacao = (capital, taxa, tempo) =>{
-    let simples = capital * taxa/100 * tempo
+const aplicacao = (capital, taxa, tempo) => {
+    let simples = capital * taxa / 100 * tempo
     console.log(simples)
-} 
+}
 
-const aplicacao2 = (capital, taxa, tempo) =>{
-    let composto = capital*(1 + taxa/100)**tempo 
+const aplicacao2 = (capital, taxa, tempo) => {
+    let composto = capital * (1 + taxa / 100) ** tempo
     console.log(composto.toFixed(2))
-   
-} 
 
-aplicacao(1000,10,12)
-aplicacao2(1000,10,12)
+}
 
+aplicacao(1000, 10, 12)
+aplicacao2(1000, 10, 12)
+
+/*07) Uma das vantagens da programação é a automatização de tarefas que não gostamos de realizar. Dito isto,
+elabore uma função cujo objetivo é resolver a fórmula de Bhaskara. Para isso, sua função deve receber três
+parâmetros, “ax2”, “bx” e “c”, de tal modo que na equação: 3x² - 5x + 12 os valores seriam respectivamente: 3,
+-5, 12. Como retorno deve ser passado um vetor que tem 2 valores um para cada possível resultado, mesmo
+que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase:
+“Delta é negativo”.*/
+
+const bhaskara = (ax2, bx, c) =>{
+    let delta = bx * bx - 4 * ax2 * c;
+    if (delta < 0) {
+      return "Delta é negativo";
+    } else {
+      let x1 = (-bx + Math.sqrt(delta)) / (2 * ax2);
+      let x2 = (-bx - Math.sqrt(delta)) / (2 * ax2);
+      return [x1, x2];
+    }
+  }
+
+  console.log(bhaskara(3, 5, 1));
+  console.log(bhaskara(3, 5, 12));

@@ -123,9 +123,9 @@ jogo. (Número do pior jogo).*/
 
 
 let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56, 0"
- 
- 
-function avaliaPontuacoes (stringPontuacoes) { //funcao recebe a string 
+
+
+function avaliaPontuacoes(stringPontuacoes) { //funcao recebe a string 
     let pontuacoes = stringPontuacoes.split(", ") // separa a string em um array de substrings
     let qtdQuebraDeRecords = 0
     let piorJogo = 1
@@ -133,17 +133,17 @@ function avaliaPontuacoes (stringPontuacoes) { //funcao recebe a string
     let menorPontuacao = pontuacoes[0]
 
     for (let i = 1; i < pontuacoes.length; i++) {
-        if(pontuacoes[i] > maiorPontuacao) {
+        if (pontuacoes[i] > maiorPontuacao) {
             maiorPontuacao = pontuacoes[i]
             qtdQuebraDeRecords++
-        }else if (pontuacoes[i] < menorPontuacao) {
+        } else if (pontuacoes[i] < menorPontuacao) {
             menorPontuacao = pontuacoes[i]
-            piorJogo = i+1;
+            piorJogo = i + 1;
         }
     }
     return [qtdQuebraDeRecords, piorJogo]
 }
- 
+
 console.log(avaliaPontuacoes(stringPontuacoes))
 
 /*09) Construa uma função para um sistema de notas de uma instituição que possui a seguinte política de
@@ -156,41 +156,23 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado.*/
 
 const sistemaEscola = nota => {
-    if (nota >= 40 ) {
-        
+    if (nota >= 40) {
+
         nota = 5 - nota % 5 + nota
         return `aprovado  com nota ${nota}`;
     } else {
         return `reprovado  com nota ${nota}`;
-    }  
+    }
 }
 
 console.log(sistemaEscola(39))
 console.log(sistemaEscola(48))
 console.log(sistemaEscola(50))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*10) Crie uma função que verifica se um número inteiro passado como parêmetro é divisível por 3 e retorne true
 ou false.*/
 
-const verifica = numero =>{
+const verifica = numero => {
     if (numero % 3 === 0) {
         return true
     } else {

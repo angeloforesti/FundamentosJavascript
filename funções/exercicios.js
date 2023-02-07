@@ -207,3 +207,14 @@ console.log(anoBissexto(2400))
 console.log(anoBissexto(2124))
 console.log(anoBissexto(2100))
 
+/*12) Faça um algoritmo que calcule o fatorial de um número.*/
+const fatorial = numero =>{
+    let resultado = 1
+    for (let i = numero; i >= 1; i--){
+        resultado *= i;
+    }
+    return resultado
+    
+}
+console.log(fatorial(5))
+

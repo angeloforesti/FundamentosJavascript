@@ -100,16 +100,105 @@ parâmetros, “ax2”, “bx” e “c”, de tal modo que na equação: 3x² -
 que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés do vetor, um string com a frase:
 “Delta é negativo”.*/
 
-const bhaskara = (ax2, bx, c) =>{
+const bhaskara = (ax2, bx, c) => {
     let delta = bx * bx - 4 * ax2 * c;
     if (delta < 0) {
-      return "Delta é negativo";
+        return "Delta é negativo";
     } else {
-      let x1 = (-bx + Math.sqrt(delta)) / (2 * ax2);
-      let x2 = (-bx - Math.sqrt(delta)) / (2 * ax2);
-      return [x1, x2];
+        let x1 = (-bx + Math.sqrt(delta)) / (2 * ax2);
+        let x2 = (-bx - Math.sqrt(delta)) / (2 * ax2);
+        return [x1, x2];
     }
-  }
+}
 
-  console.log(bhaskara(3, 5, 1));
-  console.log(bhaskara(3, 5, 12));
+console.log(bhaskara(3, 5, 1));
+console.log(bhaskara(3, 5, 12));
+
+/*08) Pedro joga N jogos de basquete por temporada. Para saber como está ele está progredindo, ele mantém
+registro de todos os as pontuações feitas por jogo. Após cada jogo ele anota no novo valor e confere se o
+mesmo é maior ou menor que seu melhor e pior desempenh o. Dada uma lista string = “pontuação1 pontuação2
+pontuação3 etc..”, escreva uma função que ao recebê-la irá comparar os valores um a um e irá retornar um
+vetor com o número de vezes que ele bateu seu recorde de maior número de pontos e quando fez seu pior
+jogo. (Número do pior jogo).*/
+
+
+let stringPontuacoes = "30, 40, 20, 4, 51, 25, 42, 38, 56, 0"
+ 
+ 
+function avaliaPontuacoes (stringPontuacoes) { //funcao recebe a string 
+    let pontuacoes = stringPontuacoes.split(", ") // separa a string em um array de substrings
+    let qtdQuebraDeRecords = 0
+    let piorJogo = 1
+    let maiorPontuacao = pontuacoes[0]
+    let menorPontuacao = pontuacoes[0]
+
+    for (let i = 1; i < pontuacoes.length; i++) {
+        if(pontuacoes[i] > maiorPontuacao) {
+            maiorPontuacao = pontuacoes[i]
+            qtdQuebraDeRecords++
+        }else if (pontuacoes[i] < menorPontuacao) {
+            menorPontuacao = pontuacoes[i]
+            piorJogo = i+1;
+        }
+    }
+    return [qtdQuebraDeRecords, piorJogo]
+}
+ 
+console.log(avaliaPontuacoes(stringPontuacoes))
+
+/*09) Construa uma função para um sistema de notas de uma instituição que possui a seguinte política de
+classificação: Todo aluno recebe uma nota de 0 a 100. Alunos com nota abaixo de 40 são reprovados. As notas
+possuem a seguinte regra de arredondamento: Se a diferença entre a nota e o próximo múltiplo de 5 for menor
+que 3, arredondar a nota para esse próximo múltiplo de 5. Se a nota for abaixo de 38, não é feito nenhum
+arredondamento pois esta nota resulta na reprovação do aluno. Por exemplo, a nota 84 será arredondada para
+85, mas a nota 29 não será arredondada por ser abaixo de 40 e não ser possível arredondamento eficiente, ou
+seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondamento é possível pois atingirá 40
+e o aluno será aprovado.*/
+
+const sistemaEscola = nota => {
+    let notaArredondada = 0
+    if (nota >= 40 ) {
+        
+        nota = 5 - nota % 5 + nota
+        return `aprovado  com nota ${nota}`;
+    } else {
+        return `reprovado  com nota ${nota}`;
+    }  
+}
+
+console.log(sistemaEscola(39))
+console.log(sistemaEscola(48))
+console.log(sistemaEscola(50))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*10) Crie uma função que verifica se um número inteiro passado como parêmetro é divisível por 3 e retorne true
+ou false.*/
+
+const verifica = numero =>{
+    if (numero % 3 === 0) {
+        return true
+    } else {
+        return false
+    }
+
+}
+
+console.log(verifica(3))
+console.log(verifica(5))

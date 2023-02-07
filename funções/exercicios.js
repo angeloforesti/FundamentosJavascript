@@ -194,13 +194,13 @@ mensagem e retornando true ou false.*/
 
 const anoBissexto = ano => {
     if (ano % 400 === 0 || (ano % 4 === 0 && ano % 100 !== 0)) {
-      console.log(`O ano ${ano} é bissexto.`);
-      return true;
+        console.log(`O ano ${ano} é bissexto.`);
+        return true;
     } else {
-      console.log(`O ano ${ano} não é bissexto.`);
-      return false;
+        console.log(`O ano ${ano} não é bissexto.`);
+        return false;
     }
-  };
+};
 
 console.log(anoBissexto(2024))
 console.log(anoBissexto(2400))
@@ -208,13 +208,39 @@ console.log(anoBissexto(2124))
 console.log(anoBissexto(2100))
 
 /*12) Faça um algoritmo que calcule o fatorial de um número.*/
-const fatorial = numero =>{
+const fatorial = numero => {
     let resultado = 1
-    for (let i = numero; i >= 1; i--){
+    for (let i = numero; i >= 1; i--) {
         resultado *= i;
     }
     return resultado
-    
+
 }
 console.log(fatorial(5))
+
+/*13) Crie um programa que exibe se um dia é dia útil, fim de semana ou dia inválido dado o número referente ao
+dia. Considere que domingo é o dia 1 e sábado é o dia 7. Utilize a estrutura Switch.*/
+const util = dia => {
+    switch (dia) {
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 6:
+            console.log('dia da semana')
+            break
+        case 1:
+        case 7:
+            console.log('final de semana')
+            break
+        default:
+            console.log('data invalida')
+    }
+
+}
+
+util(5)
+util(7)
+util(8)
+
 

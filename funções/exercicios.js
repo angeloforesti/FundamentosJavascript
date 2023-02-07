@@ -156,7 +156,6 @@ seja, que evite a reprovação do aluno. No caso de a nota ser 38, o arredondame
 e o aluno será aprovado.*/
 
 const sistemaEscola = nota => {
-    let notaArredondada = 0
     if (nota >= 40 ) {
         
         nota = 5 - nota % 5 + nota

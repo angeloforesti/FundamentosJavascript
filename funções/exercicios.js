@@ -348,3 +348,37 @@ console.log(aumento(1000, 'A'));
 console.log(aumento(1000, 'B'));
 console.log(aumento(1000, 'C'));
 console.log(aumento(1000, 'D'));
+
+/*18) Faça um programa que leia um número entre 0 e 10, e escreva este número por extenso. Use o comando
+switch. Crie um case default que escreva ‘Número fora do intervalo.’*/
+
+function leitora (lerNumero) {
+    switch (lerNumero) {
+        case 1:
+            return console.log('um')
+        case 2:
+            return console.log('dois')
+        case 3:
+            return console.log('tres')
+        case 4:
+            return console.log('quatro')
+        case 5:
+            return console.log('cinco')
+        case 6:
+            return console.log('seis')
+        case 7:
+            return console.log('sete')
+        case 8:
+            return console.log('oito')
+        case 9:
+            return console.log('nove')
+        case 10:
+            return console.log('dez')
+        default:
+            return 'numero fora do intervalo'
+    }
+}
+
+leitora(1)
+leitora(5)
+leitora(25)

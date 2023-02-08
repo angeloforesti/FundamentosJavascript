@@ -428,3 +428,43 @@ console.log(restaurante(400, 10))
 console.log(restaurante(500, 10))
 console.log(restaurante(600, 10))
 console.log(restaurante(60, 10))
+
+/*20) Crie um programa para informar quais e quantas notas são necessárias para entregar o mínimo de cédulas
+para um determinado valor informado pelo usuário considerando notas de R$ 100, R$ 50, R$ 10 e R$ 5 e R$ 1.
+Seu programa deve mostrar apenas as notas utilizadas. Por exemplo, ao solicitar R$18, o programa deve
+informar apenas a seguinte informação (note que não foram exibidas informações sobre as demais cédulas): 1
+nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.*/
+
+
+const minNotes = (value) => {
+    let n100 = Math.floor(value / 100);
+    value = value % 100;
+    let n50 = Math.floor(value / 50);
+    value = value % 50;
+    let n10 = Math.floor(value / 10);
+    value = value % 10;
+    let n5 = Math.floor(value / 5);
+    value = value % 5;
+    let n1 = value;
+  
+    let result = '';
+    if (n100 > 0) {
+      result += n100 + (n100 > 1 ? ' notas de R$ 100. ' : ' nota de R$ 100. ');
+    }
+    if (n50 > 0) {
+      result += n50 + (n50 > 1 ? ' notas de R$ 50. ' : ' nota de R$ 50. ');
+    }
+    if (n10 > 0) {
+      result += n10 + (n10 > 1 ? ' notas de R$ 10. ' : ' nota de R$ 10. ');
+    }
+    if (n5 > 0) {
+      result += n5 + (n5 > 1 ? ' notas de R$ 5. ' : ' nota de R$ 5. ');
+    }
+    if (n1 > 0) {
+      result += n1 + (n1 > 1 ? ' notas de R$ 1. ' : ' nota de R$ 1. ');
+    }
+    return result;
+  };
+  
+  console.log(minNotes(18));
+  

@@ -497,7 +497,7 @@ parâmetro um inteiro que representa o mês (1 - janeiro, 2 - fevereiro…) que 
 anuidade deve ser paga no mês de janeiro. Por mês, é cobrado 5% de juros (sob o regime de juros
 compostos). O retorno deve ser o valor a ser pago para o respectivo mês escolhido.*/
 
-function calcularValor(mes, valor){
+const calcularValor= (mes, valor)=>{
     if(mes > 0 && mes < 13) {
         atraso = mes - 1
         return (valor * ((1 + (5/100))**atraso)).toFixed(2)
@@ -507,3 +507,41 @@ function calcularValor(mes, valor){
 }
 
 console.log(calcularValor(4, 100))
+
+/*23) Escreva um algoritmo que leia o código de um aluno e suas três notas. Calcule a média ponderada do
+aluno, considerando que o peso para a maior nota seja 4 e para as duas restantes, 3. Mostre o código do
+aluno, suas três notas, a média calculada e uma mensagem "APROVADO" se a média for maior ou igual a 5 e
+"REPROVADO" se a média for menor que 5. Repita a operação até que o código lido seja negativo.*/
+
+const mediaAluno = (cod,n1, n2, n3) => {
+    let mediaPonderada = (n1*4 + n2*3 + n3*3)/10
+    if(mediaPonderada >= 4){
+        return (`aluno ${cod} aprovado com media de, ${mediaPonderada}, notas:${n1}, ${n2}, ${n3} `)
+    }else{
+        return (`aluno ${cod} reprovado com media de, ${mediaPonderada}, notas:${n1}, ${n2}, ${n3} `)
+    }
+}
+
+console.log(mediaAluno(100,8,7,6))
+
+/*24) Crie um programa que imprima 11 vezes a frase " Hello World!" utilizando uma estrutura de repetição while*/
+const olaPessoal = _ => {
+    let i = 0
+    while(i < 11){
+        console.log('ola pessoal');
+        i++
+    }
+}
+
+olaPessoal()
+
+/*25) Escrever um programa para exibir os números de 1 até 50 na tela.*/
+const muitosNumeros = _ => {
+    let i = 0
+    while(i < 51){
+        console.log(i);
+        i++
+    }
+}
+
+muitosNumeros()

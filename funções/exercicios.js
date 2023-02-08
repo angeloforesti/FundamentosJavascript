@@ -437,8 +437,8 @@ nota(s) de R$ 10. 1 nota(s) de R$ 5. 3 nota(s) de R$ 1.*/
 
 
 const minNotes = (value) => {
-    let n100 = Math.floor(value / 100);
-    value = value % 100;
+    let n100 = Math.floor(value / 100); //arredonda pra baixo e atribui o resultado a n100
+    value = value % 100; //atribui o resto como novo value pro valor abaixo
     let n50 = Math.floor(value / 50);
     value = value % 50;
     let n10 = Math.floor(value / 10);
@@ -468,3 +468,26 @@ const minNotes = (value) => {
   
   console.log(minNotes(18));
   
+  /*21) Criar um programa para identificar o valor a ser pago por um plano de saúde dada a idade do conveniado
+considerando que todos pagam R$ 100 mais um adicional conforme a seguinte tabela: 1) crianças com menos
+de 10 anos pagam R$80; 2) conveniados com idade entre 10 e 30 anos pagam R$50; 3) conveniados com
+idade acima de 30 e até 60 anos pagam R$ 95; e 4) conveniados acima de 60 anos pagam R$130*/
+
+const planoDeSaude = idade =>{
+    let padrao = 100
+    if(idade < 10){
+        console.log(`valor a ser pago é ${padrao+80}`)
+    }else if(idade > 10 && idade < 30){
+        console.log(`valor a ser pago é ${padrao+50}`)
+    }else if(idade > 30 && idade < 60){
+        console.log(`valor a ser pago é ${padrao+95}`)
+    }else if(idade > 60){
+        console.log(`valor a ser pago é ${padrao+130}`)
+    };
+    return idade
+}
+
+planoDeSaude(5);
+planoDeSaude(20);
+planoDeSaude(45);
+planoDeSaude(65);

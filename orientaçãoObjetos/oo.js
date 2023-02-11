@@ -11,10 +11,10 @@ objeto = {
       // ...
     }
 }
-objeto.processamento() // foco passou a ser o objeto, antes era a função. ( no caso de orientação à objeto)
+objeto.processamento() //chamada, foco passou a ser o objeto
 
 // --------------------Principios Importantes ----------------------------------------------
-// 1. Abstração, é transformar as coisas de uma maneira simplificada em um objeto.
+// 1. Abstração, é transformar coisas do mundo real de uma maneira simplificada em um objeto.
 // 2. Encapsulamento, detalhes da implementação escondidos e representa-los de maneira simples para interface
-// 3. Herança (prototype)
+// 3. Herança (prototype) gerar objetos mais complexos atraves de objetos mais simples
 // 4. Polimorfismo

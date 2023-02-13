@@ -10,5 +10,5 @@ const sequencia = {
   console.log(sequencia.valor, sequencia.valor)
   sequencia.valor = 1000
   console.log(sequencia.valor, sequencia.valor)
-  sequencia.valor = 900
+  sequencia.valor = 900 //valor menor que ja tem, declarado acima, foi ignorado o metodo set
   console.log(sequencia.valor, sequencia.valor)

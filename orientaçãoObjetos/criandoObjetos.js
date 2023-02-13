@@ -7,7 +7,7 @@ console.log(typeof Object, typeof new Object)
 const obj2 = new Object
 console.log(obj2)
 
-// funções construtoras 
+// funções construtoras  
 function Produto(nome, preco, desc){
   this.nome = nome
   this.getPrecoComDesconto = () =>{

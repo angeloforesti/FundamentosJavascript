@@ -17,7 +17,7 @@ const pessoa = {
     enumerable: true,
     writable: false,
     value: '01/01/2019'
-  })
+  }) 
   pessoa.dataNascimento = '01/01/2017'
   console.log(pessoa.dataNascimento)
   console.log(Object.keys(pessoa))
@@ -27,7 +27,7 @@ const pessoa = {
   const destino = {a:1} // vai receber os outros usando assign
   const o1 = {b:2}
   const o2 = {c:3, a:4}
-  const obj = Object.assign(destino, o1, o2)  // assign usado para concatenar os demais ao "destino"
+  const obj = Object.assign(destino, o1, o2)  // assign usado para concatenar os demais ao "destino" como a  chave 'a' ja existia ele sobrescreve o valor
   console.log(destino)
   
   Object.freeze(obj)

@@ -20,7 +20,7 @@ obj3.nome = 'Obj3'
 obj3.falar()
 
 // Resumindo loucura
-console.log((new MeuObjeto).__proto__ === MeuObjeto.prototype)
-console.log(MeuObjeto.__proto__ === Function.prototype)
-console.log(Function.prototype.__proto__ === Object.prototype)
+console.log((new MeuObjeto).__proto__ === MeuObjeto.prototype)// o objeto criado por uma funcao construtora aponta para o function.prototype dessa funcao
+console.log(MeuObjeto.__proto__ === Function.prototype)// a funcao construtora aponta para function.prototype
+console.log(Function.prototype.__proto__ === Object.prototype)// o proto de uma function.prototype aponta para o object.prototype
 console.log(Object.prototype.__proto__ === null)

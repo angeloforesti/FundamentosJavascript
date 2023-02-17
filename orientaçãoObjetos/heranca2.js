@@ -8,7 +8,7 @@ const filho = {__proto__: pai, attr3: 'C'} // prototipo é o Pai
 console.log(filho.attr1) // achou no avo
 console.log(filho.attr0) // undefined, não tem em nenhum dos prototipos
 console.log(filho.attr0) // neste caso existe pois foi definido na linha 3
-console.log(filho.attr0, filho.attr1, filho.attr2, filho.attr3) // o atribudo attr3 do filho subrescrever o do pai, pois ele achou primeiro no filho, ele não busca depois de achar
+console.log(filho.attr0, filho.attr1, filho.attr2, filho.attr3) // o atribudo attr3 do filho subrescreve o do pai, pois ele achou primeiro no filho 
 
 const carro = {
   velAtual: 0,
@@ -27,7 +27,7 @@ const carro = {
 
 const ferrari = {
   modelo: 'F40',
-  velMax: 324 // shadowing ( sombreando a vel max do objeto)
+  velMax: 324 // shadowing ( sombreando a vel max do objeto pai)
 }
 
 const volvo = {

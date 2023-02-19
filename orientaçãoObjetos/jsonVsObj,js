@@ -1,0 +1,19 @@
+//json diferente de obj nao tem funcoes, é apenas um formato textual que nao carrega nada consigo referente a alguma outra linguagem 
+const obj = {
+  a:1, 
+  b:2, 
+  c:3, 
+  soma (){ 
+    return a+b+c
+  }
+}
+console.log(JSON.stringify(obj)) // transformado o obj em um "Texto JSON"
+
+// console.log(JSON.parse("{a:1, b:2, c:3} ")) // erro 
+//console.log(JSON.parse("{'a': 1, 'b':2, 'c':3}")) // erro também
+console.log(JSON.parse('{"a":1, "b":2, "c":3}')) // JSON VÁLIDO
+console.log(JSON.parse('{"a": 1, "b": "String", "c": true, "d":{}, "e":[]}')) // Qualquer texto ou atributo em JSON deve ser ditado com Aspas Duplas ""
+
+// Ferramentas úteis como JSON validator  (jsonlint.com)
+// JSON.stringify para transformar em JSON
+// JSON.parse para traduzir um JSON

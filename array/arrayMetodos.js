@@ -1,5 +1,5 @@
 const pilotos = ['Vetel', 'Alonso', 'Raikkonen', 'Massa'] // pilotos não pode ser alterado, mas os valores do array podem ser alterados
-pilotos.pop() // POP remove o último elemento do Array! MAssa saiu
+pilotos.pop() // POP remove o último elemento do Array! 
 console.log(pilotos)
 
 pilotos.push('Verstappen') // push adiciona um elemento na última posição do array

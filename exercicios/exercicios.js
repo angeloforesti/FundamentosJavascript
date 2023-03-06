@@ -653,5 +653,85 @@ console.log("a quantia restante é de " +contadorFora)
 percorrendoArray([10,20,30,40,50,60,70,88])
 
 
+//30) Escreva um algoritmo que percorre um vetor de inteiros e defina o maior e menor valor dentro do vetor.
+
+let vetor = [10, 3, 5, 8, 2, 13];
+let maior = vetor[0];
+let menor = vetor[0];
+//console.log(maior)
+//console.log(menor)
+
+for(let i = 1; i < vetor.length; i++){
+  if(vetor[i] > maior){
+    maior = vetor[i];
+  }
+  if(vetor[i] < menor){
+    menor = vetor[i];
+  }
+}
+
+console.log("O maior valor é: " + maior);
+console.log("O menor valor é: " + menor);
 
 
+/*31) Escrever um algoritmo que percorre um vetor de inteiros, conta quantos números negativos há nesse vetor
+e imprime a quantidade no console.*/
+
+let vetor2 = [1, -3, 5, -8, 2,-6];
+let negativo = 0
+for(let i = 1; i < vetor2.length; i++){
+    if(vetor2[i] < 0){
+        negativo++;
+      }
+
+}
+
+console.log("A quantia de numeros negativos é de: " + negativo);
+
+//32) Construir um algoritmo que calcule a média aritmética dos valores de um vetor de inteiros
+
+let inteiros  = [1, 2, 3, 4, 5, 6];
+let soma = 0;
+
+for(let i = 0; i < inteiros.length; i++) {
+soma = soma + inteiros[i];
+}
+
+console.log(soma)
+
+/*33) Crie três vetores, chamados vetorInteiro, vetorString e vetorDouble. Cada um destes vetores deverá conter
+quatro valores, sendo o primeiro com valores inteiros, o segundo com strings e o terceiro com valores decimais.
+Declarados os vetores, utilize a função de união concat() de duas maneiras diferentes para unir os vetores, e
+mostre o resultado no console. Todos os elementos do vetor resultado deverão aparecer no console.*/
+
+let vetorInteiro = [1, 'um', 0,1]
+let vetorString = [2, 'dois', 0,2]
+let vetorDouble = [3, 'tres', 0,3]
+
+const novoArray = vetorInteiro.concat(vetorString);
+const novoArray2 = novoArray.concat(vetorDouble);
+
+console.log(novoArray2)
+
+/*34) Construa uma função que receberá duas Strings de tamanhos variados e que retornará True ou False caso
+todos os caracteres (independentemente de ser maiúsculo ou minúsculo) estejam contidos em ambas palavras.*/
+
+const verificadora = (strg1,strg) => {
+  const lowerStr1 = str1.toLowerCase();
+  const lowerStr2 = str2.toLowerCase();
+    
+}
+
+/*35) Crie dois vetores chamados vetorPilha e vetorAdiciona. Inicialmente, o vetorPilha conterá cinco elementos
+inteiros: [1, 2, 3, 4, 5]. Você deverá adicionar os valores contidos no vetorAdiciona [6, 7, 8, 9, 10] ao vetor pilha
+e mostrá-los no console. É importante lembrar que o método Push retorna somente o tamanho do Vetor. Ao
+final das operações imprima os vetores no console*/
+
+const vetorPilha = [1, 2, 3, 4, 5]
+const vetorAdiciona = [6, 7, 8, 9, 10]
+
+for(let i = 0; i < vetorPilha.length; i++){
+    vetorAdiciona.push(vetorPilha[i]);
+}
+
+console.log(vetorAdiciona)

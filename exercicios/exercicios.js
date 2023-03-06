@@ -767,3 +767,43 @@ const function2 = (vetor2, multiplicando) =>{
 
 console.log(function2([1, 5, 6], 5))
 
+/*37) Escreva duas funções, uma para progressão aritmética e uma para progressão geométrica que recebam
+como parâmetros um número n (número de termo), a1 (o primeiro termo) e r (a razão) e escreva os n termos ,
+bem como a soma dos elementos.*/
+
+function pA (n, a1, r) {
+    for (let i = 0; i < n; i++) {
+        console.log(a1 + r*i)
+    }
+    console.log('Soma: ' + (n * (a1 + (a1 + ((n-1)*r))))/2)    
+}
+
+function pG (n, a1, r) {
+    //console.log(a1)
+    for(let i = 0; i < n; i++){
+        console.log(a1*(r**i))
+    }
+    console.log('Soma: ' + (a1 * ((r**n)-1))/(r-1))
+}
+
+pA(10, 10, 15)
+console.log('----------------');
+pG(10, 5, 3)
+
+/*38) Escreva uma função que receba dois parâmetros início e fim. Essa função deve imprimir todos os números
+ímpares que estão entre esses valores. Por padrão os valores devem ser 0 para início e 100 para fim. Atente
+para corrigir a ordem dos parâmetros caso a função receba o valor maior antes do menor.*/
+
+const inicioFim = (inicio, fim) => {  
+    let newArray = []
+    let diff = fim - inicio
+    for(let i = 0; i < diff; i++) {
+      if((inicio + i) % 2 !== 0) {
+        newArray.push(inicio + i)    
+      }
+    }
+    return newArray
+  }
+  
+  console.log(inicioFim(1, 100))
+  

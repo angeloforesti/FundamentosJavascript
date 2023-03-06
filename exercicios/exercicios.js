@@ -730,8 +730,13 @@ final das operações imprima os vetores no console*/
 const vetorPilha = [1, 2, 3, 4, 5]
 const vetorAdiciona = [6, 7, 8, 9, 10]
 
-for(let i = 0; i < vetorPilha.length; i++){
-    vetorAdiciona.push(vetorPilha[i]);
-}
+let vetorResultante = vetorPilha.concat(vetorAdiciona)
 
-console.log(vetorAdiciona)
+
+console.log(vetorResultante)
+
+
+/*36) Crie duas funções que recebem dois parâmetros, um vetor com apenas valores numéricos e um número
+inteiro. Faça com que a primeira função retorne outro vetor que será resultado da multiplicação de cada
+elemento pelo número passado como parâmetro. A segunda função fará o mesmo da primeira se e somente se
+o valor do elemento for maior que 5*/

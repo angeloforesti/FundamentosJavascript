@@ -740,3 +740,30 @@ console.log(vetorResultante)
 inteiro. Faça com que a primeira função retorne outro vetor que será resultado da multiplicação de cada
 elemento pelo número passado como parâmetro. A segunda função fará o mesmo da primeira se e somente se
 o valor do elemento for maior que 5*/
+const function1 = (vetor1, multiplicando) =>{
+    arrayResultado = []
+    for(let i = 0; i < vetor1.length; i++){
+        arrayResultado.push(multiplicando * vetor1[i])
+}
+    return arrayResultado
+}
+
+console.log(function1([1, 2, 4], 5))
+
+const function2 = (vetor2, multiplicando) =>{
+    arrayResultado = []
+    
+    for(let i = 0; i < vetor2.length; i++){
+        if(vetor2[i] >= 5 ){
+        arrayResultado.push(multiplicando * vetor2[i])
+}else{
+    console.log('ta errado')
+}
+    }
+    
+    return arrayResultado
+}
+
+
+console.log(function2([1, 5, 6], 5))
+
